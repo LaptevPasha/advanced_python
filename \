@@ -1,0 +1,15 @@
+import gc
+
+
+def g():
+    marker = object()
+    print('step 2 - marker created')
+    yield marker
+    print('step 3 - marker returned')
+    [tup] = [x for x in gc.get_referrers(marker) if type(x) is tuple]
+    print('step 4 - tup list generated')
+#    print(tup[1])
+
+
+tuple(g())
+print('step 1')
