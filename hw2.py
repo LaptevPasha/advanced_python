@@ -3,8 +3,7 @@ import gc
 
 
 def g():
-    """
-    Create a list of tuple referrers to marker.
+    """Create a list of tuple referrers to marker.
 
     Return generator object.
     """
