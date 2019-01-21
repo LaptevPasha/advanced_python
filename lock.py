@@ -1,5 +1,5 @@
-import threading
 import os
+import threading
 
 
 def number_generator(thread_number):
