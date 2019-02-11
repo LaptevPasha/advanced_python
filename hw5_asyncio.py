@@ -13,7 +13,7 @@ async def get_all_files(loop):
 async def downloader(session, link):
     async with session.get(link) as response:
         filename = link.split('/')[-1]
-        print(f'Downloading: {filename}')
+        print('Downloading: ', filename)
 
         with open(filename, 'wb') as f_handle:
             while True:
@@ -43,4 +43,4 @@ loop.close()
 
 end = time.time()
 dtime = end - start
-print(f'Downloading time: {dtime} seconds')
+print('Downloading time: ', dtime, ' seconds')

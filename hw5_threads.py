@@ -8,7 +8,7 @@ def downloader(link):
     filename = link.split('/')[-1]
     with urlopen(link) as response, open(filename, 'wb') as output_file:
         shutil.copyfileobj(response, output_file)
-    print(f'Downloading: {filename}')
+    print('Downloading: ', filename)
 
 
 start = time.time()
@@ -35,4 +35,4 @@ for t in threads:
 
 end = time.time()
 dtime = end - start
-print(f'Downloading time: {dtime} seconds')
+print('Downloading time: ', dtime, ' seconds')
