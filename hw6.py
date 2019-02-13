@@ -2,7 +2,7 @@ import json
 import urllib.request
 
 
-class Money:
+class Money(object):
     def converter(self, new_currency):
         if not self.json_string:
             with urllib.request.urlopen(self.url) as response:
